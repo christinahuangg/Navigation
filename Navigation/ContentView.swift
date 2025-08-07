@@ -7,18 +7,28 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+struct ContentView: View
+{
+    var body: some View
+    {
+       
+        NavigationStack
+        {
+            VStack
+            {
+                Text("this is the root view 🌳")
+                NavigationLink(destination: Text("you've reached the second view"))
+                {
+                    Text("click me")
+                }
+            }
+            
         }
-        .padding()
+
     }
 }
 
-#Preview {
+#Preview
+{
     ContentView()
 }
