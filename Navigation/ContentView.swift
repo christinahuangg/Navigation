@@ -13,14 +13,44 @@ struct ContentView: View
     {
        
         NavigationStack
+            
         {
             VStack
             {
                 Text("this is the root view 🌳")
-                NavigationLink(destination: Text("you've reached the second view"))
+                NavigationLink(destination: second_view())
                 {
                     Text("click me")
+                        .font(.largeTitle)
+                        .fontWeight(.black)
                 }
+                
+                HStack{
+                    NavigationLink(destination: Text("dont click"))
+                    {
+                        Text("dont click")
+                    }
+                    
+                    NavigationLink(destination: Text("dont click"))
+                    {
+                        Text("dont click")
+                    }
+                    
+                    NavigationLink(destination: Text("dont click"))
+                    {
+                        Text("dont click")
+                    }
+                    
+                    NavigationLink(destination: Text("dont click"))
+                    {
+                        Text("dont click")
+                    }
+                    .navigationTitle(Text("home"))
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarHidden(true)
+                }
+               
+
             }
             
         }
